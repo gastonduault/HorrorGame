@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-
 /****************************************
  * Author: Julie
  * Date: 14/01/2025
@@ -18,6 +17,8 @@ public class MirrorBreak : MonoBehaviour
     public XRGrabInteractable grabInteractable;
 
     public Vector3 offsetOnGrab = new Vector3(0, 0, 0.2f); // Décalage en avant
+
+    public AudioSource breakSound;
 
     void Start()
     {
@@ -42,7 +43,12 @@ public class MirrorBreak : MonoBehaviour
         rb.useGravity = true;
     }
 
+    void playSound(){
+        AudioSource.PlayClipAtPoint(breakSound.clip, transform.position);
+    }
+
     void BreakMirror(){
+        playSound();
         brokenGlass.transform.position = glass.transform.position;
         brokenGlass.transform.rotation = glass.transform.rotation;
         glass.SetActive(false);
@@ -56,6 +62,10 @@ public class MirrorBreak : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.B)){
+            Debug.Log("IFFFFF Test sound");
+            //playSound();
+            BreakMirror();
+        }
     }
 }
