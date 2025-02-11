@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class Clock : MonoBehaviour {
+
+	//-- set start time 00:00
     public int minutes = 0;
     public int hour = 0;
 	public int seconds = 0;
@@ -11,12 +13,15 @@ public class Clock : MonoBehaviour {
     public GameObject pointerMinutes;
     public GameObject pointerHours;
     
-    public float clockSpeed = 1.0f;
+    //-- time speed factor
+    public float clockSpeed = 1.0f;     // 1.0f = realtime, < 1.0f = slower, > 1.0f = faster
 
+    //-- internal vars
     float msecs=0;
 
 void Start() 
 {
+	//-- set real time
 	if (realTime)
 	{
 		hour=System.DateTime.Now.Hour;
@@ -27,6 +32,7 @@ void Start()
 
 void Update() 
 {
+    //-- calculate time
     msecs += Time.deltaTime * clockSpeed;
     if(msecs >= 1.0f)
     {
@@ -46,10 +52,13 @@ void Update()
         }
     }
 
+
+    //-- calculate pointer angles
     float rotationSeconds = (360.0f / 60.0f)  * seconds;
     float rotationMinutes = (360.0f / 60.0f)  * minutes;
     float rotationHours   = ((360.0f / 12.0f) * hour) + ((360.0f / (60.0f * 12.0f)) * minutes);
 
+    //-- draw pointers
     pointerSeconds.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationSeconds);
     pointerMinutes.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationMinutes);
     pointerHours.transform.localEulerAngles   = new Vector3(0.0f, 0.0f, rotationHours);
