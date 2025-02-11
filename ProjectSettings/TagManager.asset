@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CuttingTool
+  - Cutter
+  - Wire
   layers:
   - Default
   - TransparentFX
