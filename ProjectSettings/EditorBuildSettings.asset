@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Mirror.unity
     guid: b831fb126af4812419cf4d88dd6b5182
+  - enabled: 1
+    path: Assets/Scenes/Schedule.unity
+    guid: 034c7726fa5b2354cb222ebb4d2f19ad
   m_configObjects:
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: 43263487512924d9a8a67801ca0f964f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8ed181823633ecf4c8fe4da9ab1b0610, type: 2}
