@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Scene_amnesia
+  companyName: LesMeilleursDresseurs
+  productName: horrorgame-JL
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -155,7 +155,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.Scene_amnesia
+    Android: com.LesMeilleursDresseurs.horrorgameJL
+    Standalone: com.DefaultCompany.Scene-amnesia
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -777,11 +778,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: c404f9e7-9e33-4885-bd21-3dde6c322206
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Scene_amnesia 2025-01-07_14-15-03
-  organizationId: gastonduo
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0
